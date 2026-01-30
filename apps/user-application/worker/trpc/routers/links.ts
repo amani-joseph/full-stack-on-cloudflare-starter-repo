@@ -6,11 +6,11 @@ import {
 } from "@repo/data-ops/zod-schema/links";
 import { activeLinksLastHour, createLink, getLast24And48HourClicks, getLast30DaysClicks, getLast30DaysClicksByCountry, getLink, getLinks, totalLinkClickLastHour, updateLinkDestinations, updateLinkName } from "@repo/data-ops/queries/links";
 import { TRPCError } from "@trpc/server";
-import {
-  ACTIVE_LINKS_LAST_HOUR,
-  LAST_30_DAYS_BY_COUNTRY,
-  LINK_LIST,
-} from "./dummy-data";
+// import {
+//   ACTIVE_LINKS_LAST_HOUR,
+//   LAST_30_DAYS_BY_COUNTRY,
+//   LINK_LIST,
+// } from "./dummy-data";
 
 export const linksTrpcRoutes = t.router({
   linkList: t.procedure
