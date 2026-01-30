@@ -1,6 +1,7 @@
 -- Current sql file was generated after introspecting the database
 -- If you want to run this migration please uncomment this code before executing migrations
-CREATE TABLE IF NOT EXISTS `links` (
+/*
+CREATE TABLE `links` (
 	`link_id` text PRIMARY KEY NOT NULL,
 	`account_id` text NOT NULL,
 	`destinations` text NOT NULL,
@@ -9,7 +10,7 @@ CREATE TABLE IF NOT EXISTS `links` (
 	`name` text NOT NULL
 );
 --> statement-breakpoint
-CREATE TABLE IF NOT EXISTS `link_clicks` (
+CREATE TABLE `link_clicks` (
 	`id` text NOT NULL,
 	`account_id` text NOT NULL,
 	`country` text,
@@ -19,8 +20,8 @@ CREATE TABLE IF NOT EXISTS `link_clicks` (
 	`longitude` real
 );
 --> statement-breakpoint
-CREATE INDEX IF NOT EXISTS `idx_link_clicks_id` ON `link_clicks` (`id`);--> statement-breakpoint
-CREATE TABLE IF NOT EXISTS `destination_evaluations` (
+CREATE INDEX `idx_link_clicks_id` ON `link_clicks` (`id`);--> statement-breakpoint
+CREATE TABLE `destination_evaluations` (
 	`id` text PRIMARY KEY,
 	`link_id` text NOT NULL,
 	`account_id` text NOT NULL,
@@ -30,4 +31,5 @@ CREATE TABLE IF NOT EXISTS `destination_evaluations` (
 	`created_at` numeric DEFAULT (CURRENT_TIMESTAMP) NOT NULL
 );
 --> statement-breakpoint
-CREATE INDEX IF NOT EXISTS `idx_destination_evaluations_account_time` ON `destination_evaluations` (`account_id`,`created_at`);
+CREATE INDEX `idx_destination_evaluations_account_time` ON `destination_evaluations` (`account_id`,`created_at`);
+*/
